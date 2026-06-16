@@ -1,0 +1,35 @@
+{
+  "name": "aurevia-shopify-theme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Theme Shopify Online Store 2.0 AUREVIA Watches et outils optionnels d'import.",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "aurevia:create": "node scripts/create-aurevia-shopify.mjs",
+    "aurevia:push-theme": "node scripts/push-aurevia-theme.mjs",
+    "aurevia:copy-next": "node scripts/copy-next-theme-file.mjs",
+    "aurevia:export-content": "node scripts/export-aurevia-content.mjs",
+    "aurevia:copy-content": "node scripts/copy-shopify-content.mjs",
+    "neodom:validate-scoring": "tsx src/neodomImageProjectReport.ts --validate-only",
+    "neodom:image-dashboard": "tsx src/neodomImageProjectReport.ts",
+    "theme:validate": "node scripts/validate-theme.mjs"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "openai": "^4.77.0",
+    "p-limit": "^6.2.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
