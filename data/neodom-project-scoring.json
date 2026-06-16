@@ -1,0 +1,692 @@
+{
+  "project": {
+    "id": "neodom",
+    "name": "Neodom",
+    "totalPoints": 1000,
+    "completionRule": "Project completion is 100% only when product sheets, images, variants, SEO, collections, apps, marketing and QA are complete."
+  },
+  "rules": [
+    "Product images, variants, SEO filenames, alt text, Shopify upload, variant association and image QA represent 70% of the global project.",
+    "Product text, descriptions, SEO fields, collections, tags, apps, marketing and global QA represent the remaining 30%.",
+    "Image tasks are the highest-value tasks in the project.",
+    "A task gives points only when it is validated.",
+    "Rejected images give 0 points.",
+    "Images validated with corrections receive reduced points according to the quality coefficient."
+  ],
+  "blocks": [
+    {
+      "id": "product_images",
+      "label": "Product images, variants, filenames, alt text and Shopify variant association",
+      "weightPercent": 70,
+      "points": 700
+    },
+    {
+      "id": "product_sheets",
+      "label": "Product sheets: title, HTML description, SEO and variant text",
+      "weightPercent": 10,
+      "points": 100
+    },
+    {
+      "id": "collections_navigation",
+      "label": "Collections, tags, navigation and menus",
+      "weightPercent": 5,
+      "points": 50
+    },
+    {
+      "id": "shopify_apps",
+      "label": "Shopify apps: TrustWILL, DSers, Bundles and Checkout Blocks",
+      "weightPercent": 5,
+      "points": 50
+    },
+    {
+      "id": "marketing",
+      "label": "Marketing: blogs, emails, loyalty and abandoned carts",
+      "weightPercent": 5,
+      "points": 50
+    },
+    {
+      "id": "global_qa",
+      "label": "Final QA: mobile, desktop, checkout, links and global consistency",
+      "weightPercent": 5,
+      "points": 50
+    }
+  ],
+  "imageSubtasks": [
+    {
+      "id": "variant_analysis",
+      "label": "Identify product variants",
+      "weightPercent": 5,
+      "points": 50,
+      "workflowStatus": "variants_analyzed"
+    },
+    {
+      "id": "source_images_organized",
+      "label": "Recover and organize source images",
+      "weightPercent": 5,
+      "points": 50,
+      "workflowStatus": "source_images_organized"
+    },
+    {
+      "id": "studio_main_images",
+      "label": "Generate main studio images",
+      "weightPercent": 10,
+      "points": 100,
+      "workflowStatus": "studio_images_generated"
+    },
+    {
+      "id": "variant_images",
+      "label": "Generate clean variant images on white background",
+      "weightPercent": 15,
+      "points": 150,
+      "workflowStatus": "variant_images_generated"
+    },
+    {
+      "id": "lifestyle_images",
+      "label": "Generate lifestyle and context images",
+      "weightPercent": 8,
+      "points": 80,
+      "workflowStatus": "lifestyle_images_generated"
+    },
+    {
+      "id": "technical_images",
+      "label": "Generate technical, dimension and detail images",
+      "weightPercent": 7,
+      "points": 70,
+      "workflowStatus": "technical_images_generated"
+    },
+    {
+      "id": "seo_filenames",
+      "label": "Rename image files with SEO-safe descriptive names",
+      "weightPercent": 5,
+      "points": 50,
+      "workflowStatus": "files_renamed"
+    },
+    {
+      "id": "seo_alt_text",
+      "label": "Create natural SEO alt text",
+      "weightPercent": 5,
+      "points": 50,
+      "workflowStatus": "alt_text_added"
+    },
+    {
+      "id": "shopify_upload",
+      "label": "Upload images to Shopify",
+      "weightPercent": 3,
+      "points": 30,
+      "workflowStatus": "images_uploaded"
+    },
+    {
+      "id": "variant_association",
+      "label": "Associate images with the correct Shopify variants",
+      "weightPercent": 5,
+      "points": 50,
+      "workflowStatus": "images_associated_to_variants"
+    },
+    {
+      "id": "image_quality_qa",
+      "label": "Final image quality verification",
+      "weightPercent": 2,
+      "points": 20,
+      "workflowStatus": "images_validated"
+    }
+  ],
+  "imageWorkflowStatuses": [
+    {
+      "id": "product_to_process",
+      "label": "Produit a traiter",
+      "order": 1
+    },
+    {
+      "id": "variants_analyzed",
+      "label": "Variantes analysees",
+      "order": 2
+    },
+    {
+      "id": "source_images_organized",
+      "label": "Images sources organisees",
+      "order": 3
+    },
+    {
+      "id": "studio_images_generated",
+      "label": "Images studio generees",
+      "order": 4
+    },
+    {
+      "id": "variant_images_generated",
+      "label": "Images variantes generees",
+      "order": 5
+    },
+    {
+      "id": "lifestyle_images_generated",
+      "label": "Images lifestyle generees",
+      "order": 6
+    },
+    {
+      "id": "technical_images_generated",
+      "label": "Images techniques generees",
+      "order": 7
+    },
+    {
+      "id": "files_renamed",
+      "label": "Fichiers renommes",
+      "order": 8
+    },
+    {
+      "id": "alt_text_added",
+      "label": "Alt text ajoutes",
+      "order": 9
+    },
+    {
+      "id": "images_uploaded",
+      "label": "Images uploadees",
+      "order": 10
+    },
+    {
+      "id": "images_associated_to_variants",
+      "label": "Images associees aux variantes",
+      "order": 11
+    },
+    {
+      "id": "pending_image_validation",
+      "label": "En attente de validation image",
+      "order": 12
+    },
+    {
+      "id": "corrections_requested",
+      "label": "Corrections demandees",
+      "order": 13
+    },
+    {
+      "id": "images_validated",
+      "label": "Images validees",
+      "order": 14
+    },
+    {
+      "id": "images_published",
+      "label": "Images publiees",
+      "order": 15
+    }
+  ],
+  "productImageWorkflowFields": [
+    "productName",
+    "shopifyLink",
+    "collection",
+    "productType",
+    "variantCount",
+    "imageOwner"
+  ],
+  "variantAnalysisChecks": [
+    "colors",
+    "formats",
+    "buttonCount",
+    "wifiZigbeeMatterVersions",
+    "packs",
+    "models",
+    "includedAccessories"
+  ],
+  "sourceImageStatuses": [
+    {
+      "id": "sources_complete",
+      "label": "Sources completes"
+    },
+    {
+      "id": "sources_incomplete",
+      "label": "Sources incompletes"
+    },
+    {
+      "id": "images_missing",
+      "label": "Images manquantes"
+    }
+  ],
+  "recommendedShopifyImageOrder": [
+    "main_studio_image",
+    "variant_images",
+    "lifestyle_images",
+    "functional_images",
+    "detail_or_macro_images",
+    "technical_images",
+    "ecosystem_images"
+  ],
+  "imageValidationChecklist": [
+    {
+      "id": "product_fidelity",
+      "label": "Product fidelity"
+    },
+    {
+      "id": "color_consistency",
+      "label": "Color consistency"
+    },
+    {
+      "id": "variant_consistency",
+      "label": "Variant consistency"
+    },
+    {
+      "id": "studio_quality",
+      "label": "Studio quality"
+    },
+    {
+      "id": "no_supplier_logo",
+      "label": "No supplier logo"
+    },
+    {
+      "id": "no_false_text",
+      "label": "No false text"
+    },
+    {
+      "id": "no_invented_dimensions",
+      "label": "No invented dimensions"
+    },
+    {
+      "id": "seo_filename",
+      "label": "SEO filename"
+    },
+    {
+      "id": "seo_alt_text",
+      "label": "SEO alt text"
+    },
+    {
+      "id": "shopify_variant_association",
+      "label": "Shopify variant association"
+    },
+    {
+      "id": "mobile_render",
+      "label": "Mobile render OK"
+    },
+    {
+      "id": "desktop_render",
+      "label": "Desktop render OK"
+    }
+  ],
+  "qualityCoefficients": [
+    {
+      "status": "pending",
+      "coefficient": 0
+    },
+    {
+      "status": "validated",
+      "coefficient": 1
+    },
+    {
+      "status": "published",
+      "coefficient": 1
+    },
+    {
+      "status": "validated_with_corrections",
+      "coefficient": 0.7
+    },
+    {
+      "status": "corrections_requested",
+      "coefficient": 0
+    },
+    {
+      "status": "rejected",
+      "coefficient": 0
+    }
+  ],
+  "dashboardMetrics": [
+    "globalProjectProgress",
+    "imageBlockProgress",
+    "generatedImages",
+    "validatedImages",
+    "rejectedImages",
+    "variantsWithoutImage",
+    "imagesWithoutAltText",
+    "imagesNotRenamed",
+    "productsWithImagesFullyValidated",
+    "productsWithTitlesValidated",
+    "productsWithHtmlDescriptionsValidated",
+    "productsMissingSeoTitle",
+    "productsMissingSeoDescription",
+    "productsMissingCategory",
+    "productsMissingStandardMetafields",
+    "variantTextIssues",
+    "compareAtPriceIssues",
+    "customsDataMissingVariants",
+    "reviewsPrepared",
+    "reviewsImported",
+    "blogArticlesPrepared",
+    "blogArticlesPublished",
+    "trustWillConfigured",
+    "trustooConfigured",
+    "searchDiscoveryConfigured",
+    "omnisendConfigured",
+    "stripeConfigured",
+    "checkoutQaPassed",
+    "legalPagesValidated",
+    "visibleStoreIssuesOpen",
+    "globalQaIssuesOpen"
+  ],
+  "complexProductImageScoring": [
+    {
+      "id": "variant_analysis",
+      "points": 5
+    },
+    {
+      "id": "source_images_organized",
+      "points": 5
+    },
+    {
+      "id": "studio_main_images",
+      "points": 10
+    },
+    {
+      "id": "variant_images",
+      "points": 20
+    },
+    {
+      "id": "lifestyle_images",
+      "points": 8
+    },
+    {
+      "id": "technical_images",
+      "points": 7
+    },
+    {
+      "id": "seo_filenames",
+      "points": 7
+    },
+    {
+      "id": "seo_alt_text",
+      "points": 7
+    },
+    {
+      "id": "shopify_upload",
+      "points": 5
+    },
+    {
+      "id": "variant_association",
+      "points": 8
+    },
+    {
+      "id": "image_quality_qa",
+      "points": 8
+    }
+  ],
+  "nonImageSubtasks": [
+    {
+      "blockId": "product_sheets",
+      "id": "product_title_rewrite",
+      "label": "Rewrite and normalize Neodom product titles",
+      "points": 15,
+      "evidence": ["titres-produits-neodom-0-180-par-20.txt", "titres-produits-neodom-180-430-par-20.txt"]
+    },
+    {
+      "blockId": "product_sheets",
+      "id": "html_product_descriptions",
+      "label": "Create or clean Shopify HTML product descriptions",
+      "points": 25,
+      "evidence": ["neodom_public_products.json", "neodom_product_page_sample.html", "src/generator.ts"]
+    },
+    {
+      "blockId": "product_sheets",
+      "id": "seo_title_meta_slug",
+      "label": "Fill SEO title, meta description and product slug",
+      "points": 20,
+      "evidence": ["shopify-product-full-audit-summary-2026-06-09.json", "shopify-product-visible-audit-summary-2026-06-09.json"]
+    },
+    {
+      "blockId": "product_sheets",
+      "id": "variant_text_cleanup_translation",
+      "label": "Clean and translate variant option names and values",
+      "points": 15,
+      "evidence": ["src/variantTranslator.ts", "src/variantCleaner.ts", "src/variantsFr.ts", "src/variantReport.ts"]
+    },
+    {
+      "blockId": "product_sheets",
+      "id": "product_links_handles",
+      "label": "Check product links, handles and Shopify product access",
+      "points": 10,
+      "evidence": ["liens-produits-neodom-180-430-par-20.txt", "tmp-products-sitemap.xml"]
+    },
+    {
+      "blockId": "product_sheets",
+      "id": "compatibility_claim_review",
+      "label": "Review compatibility claims, dimensions and product warnings without inventing data",
+      "points": 15,
+      "evidence": ["shopify-product-full-audit-issues-2026-06-09.csv", "shopify-generated"]
+    },
+    {
+      "blockId": "collections_navigation",
+      "id": "collection_structure",
+      "label": "Create and organize Shopify collections",
+      "points": 8,
+      "evidence": ["content/navigation-aurevia.json", "content/neodom-blog-seo-pack-2026-06-08/README.md"]
+    },
+    {
+      "blockId": "collections_navigation",
+      "id": "product_category_taxonomy",
+      "label": "Assign Shopify product categories and taxonomy metadata",
+      "points": 12,
+      "evidence": ["shopify-category-meta-update-plan-2026-06-09.json", "shopify-category-audit-after-update-2026-06-09.jsonl", "missing-category-products-2026-06-09.txt"]
+    },
+    {
+      "blockId": "collections_navigation",
+      "id": "standard_metafields_fill",
+      "label": "Fill standard Shopify metafields",
+      "points": 12,
+      "evidence": ["shopify-standard-metafields-audit-before-fill-2026-06-09.jsonl", "shopify-standard-metafields-audit-final-confirmed-2026-06-09.jsonl"]
+    },
+    {
+      "blockId": "collections_navigation",
+      "id": "tags_product_type",
+      "label": "Clean tags, product types and collection matching",
+      "points": 6,
+      "evidence": ["src/categoryClassifier.ts", "src/collectionSelector.ts", "src/collectionMappings.ts"]
+    },
+    {
+      "blockId": "collections_navigation",
+      "id": "search_discovery_filters",
+      "label": "Configure Shopify Search & Discovery filters, search and recommendations",
+      "points": 6,
+      "evidence": ["neodom-search-discovery-filters.png", "neodom-search-discovery-search.png", "neodom-search-discovery-recommendations.png"]
+    },
+    {
+      "blockId": "collections_navigation",
+      "id": "navigation_menus_links",
+      "label": "Check navigation, menus, internal links and footer links",
+      "points": 6,
+      "evidence": ["content/navigation-aurevia.json", "AUREVIA_IMPORT_STEPS.md"]
+    },
+    {
+      "blockId": "shopify_apps",
+      "id": "trustwill_loyalty_points",
+      "label": "Configure TrustWILL loyalty points and reward rules",
+      "points": 14,
+      "evidence": ["NEODOM_TRUSTWILL_PROGRAMME_FIDELITE.md", "trustwill_program.png", "program_points_start.png"]
+    },
+    {
+      "blockId": "shopify_apps",
+      "id": "trustwill_referrals_social",
+      "label": "Configure TrustWILL referrals, social sharing and referral copy",
+      "points": 8,
+      "evidence": ["trustwill_referrals_tab.png", "trustwill_referrer_edit.png", "trustwill_social_modal.png"]
+    },
+    {
+      "blockId": "shopify_apps",
+      "id": "trustoo_reviews_import",
+      "label": "Prepare and import Trustoo review files",
+      "points": 10,
+      "evidence": ["trustoo-neodom-avis-test-5-par-produit-publies-test-visible.csv", "neodom_trustoo_reviews_import_ready.csv", "neodom_reviews_audit_enriched.csv"]
+    },
+    {
+      "blockId": "shopify_apps",
+      "id": "dsers_supplier_order_check",
+      "label": "Check DSers supplier, order and product mapping constraints",
+      "points": 5,
+      "evidence": ["shopify-product-full-audit-issues-2026-06-09.csv"]
+    },
+    {
+      "blockId": "shopify_apps",
+      "id": "bundles_packs_setup",
+      "label": "Prepare bundles, packs and multi-product offers",
+      "points": 5,
+      "evidence": ["neodom_public_products.json", "shopify-product-full-audit-issues-2026-06-09.csv"]
+    },
+    {
+      "blockId": "shopify_apps",
+      "id": "checkout_blocks_checkout_ux",
+      "label": "Check Checkout Blocks and checkout UX",
+      "points": 5,
+      "evidence": ["screen-checkout-reopen.png", "screen-checkout-newwindow.png", "screen-checkout-zoom.png"]
+    },
+    {
+      "blockId": "shopify_apps",
+      "id": "stripe_payment_methods",
+      "label": "Check Stripe payment settings and payment methods",
+      "points": 3,
+      "evidence": ["stripe-dashboard-neodom.png", "stripe-payment-methods-tab.png", "stripe-payments-settings.png"]
+    },
+    {
+      "blockId": "marketing",
+      "id": "blog_seo_pack",
+      "label": "Create and prepare the Neodom SEO blog article pack",
+      "points": 14,
+      "evidence": ["content/neodom-blog-seo-pack-2026-06-08/README.md", "content/neodom-blog-seo-pack-2026-06-08/articles-metadata.json", "content/neodom-blog-seo"]
+    },
+    {
+      "blockId": "marketing",
+      "id": "blog_images_alt_cta",
+      "label": "Prepare blog image alt text, CTAs and internal linking",
+      "points": 5,
+      "evidence": ["content/neodom-blog-seo-pack-2026-06-08/articles-metadata.json", "scripts/generate_neodom_blog_images.py"]
+    },
+    {
+      "blockId": "marketing",
+      "id": "omnisend_messaging_automations",
+      "label": "Configure Omnisend or Shopify messaging automations",
+      "points": 8,
+      "evidence": ["screen-omnisend.png", "screen-omnisend-2.png", "screen-omni-tab-active.png", "shopify-messaging-automations.png"]
+    },
+    {
+      "blockId": "marketing",
+      "id": "abandoned_cart_cart_modal",
+      "label": "Review abandoned cart, cart popup and cart modal behavior",
+      "points": 7,
+      "evidence": ["screen-panier-modal-grid.png", "screen-after-activate-panier.png", "screen-tab1-after-panier.png"]
+    },
+    {
+      "blockId": "marketing",
+      "id": "email_sms_templates",
+      "label": "Prepare email, SMS and messaging templates",
+      "points": 5,
+      "evidence": ["shopify-messaging-automation-templates.png", "shopify-messaging-custom-templates.png", "shopify-messaging-sms-settings.png"]
+    },
+    {
+      "blockId": "marketing",
+      "id": "loyalty_referral_copy",
+      "label": "Write loyalty and referral marketing copy",
+      "points": 5,
+      "evidence": ["NEODOM_TRUSTWILL_PROGRAMME_FIDELITE.md", "neodom-programme-fidelite-pack.zip"]
+    },
+    {
+      "blockId": "marketing",
+      "id": "reviews_social_proof",
+      "label": "Prepare reviews and social proof content",
+      "points": 6,
+      "evidence": ["neodom_reviews_import_prepared_strict.csv", "neodom_trustoo_reviews_import_summary.json", "neodom_review_product_ids.json"]
+    },
+    {
+      "blockId": "global_qa",
+      "id": "product_full_audit",
+      "label": "Run full product audit and classify issues",
+      "points": 12,
+      "evidence": ["shopify-product-full-audit-2026-06-09.jsonl", "shopify-product-full-audit-summary-2026-06-09.json", "shopify-product-full-audit-issues-2026-06-09.csv"]
+    },
+    {
+      "blockId": "global_qa",
+      "id": "mobile_desktop_product_cart_checkout",
+      "label": "Verify mobile and desktop product, cart and checkout flows",
+      "points": 10,
+      "evidence": ["screen-first-card-test.png", "screen-panier-90-scrolled.png", "screen-checkout-newwindow.png"]
+    },
+    {
+      "blockId": "global_qa",
+      "id": "payment_checkout_settings",
+      "label": "Verify payment, Stripe and checkout settings",
+      "points": 6,
+      "evidence": ["stripe-payment-methods-neodom.png", "stripe-settings-click.png", "screen-checkout-reopen2.png"]
+    },
+    {
+      "blockId": "global_qa",
+      "id": "legal_pages_policies",
+      "label": "Check legal pages, privacy, cookies, shipping and returns",
+      "points": 6,
+      "evidence": ["LEGAL_PLACEHOLDERS.md", "content/pages", "templates/page.conditions-generales-de-vente.json"]
+    },
+    {
+      "blockId": "global_qa",
+      "id": "theme_settings_popup_cleanup",
+      "label": "Review theme settings, popups and third-party embed cleanup",
+      "points": 5,
+      "evidence": ["shopify-generated/theme-bulk/settings", "screen-templates.png", "screen-modal-header-grid.png"]
+    },
+    {
+      "blockId": "global_qa",
+      "id": "product_page_consistency",
+      "label": "Check product page consistency, layout and conversion modules",
+      "points": 5,
+      "evidence": ["neodom_product_page_sample.html", "templates/product.json", "sections"]
+    },
+    {
+      "blockId": "global_qa",
+      "id": "visible_store_links_final",
+      "label": "Final visible-store audit, links and global coherence check",
+      "points": 6,
+      "evidence": ["shopify-product-visible-audit-summary-2026-06-09.json", "tmp-products-sitemap.xml", "screen-capture.png"]
+    }
+  ],
+  "detectedWorkspaceWorkstreams": [
+    {
+      "id": "product_content_batches",
+      "label": "Product title, link and SEO batches",
+      "paths": ["titres-produits-neodom-0-180-par-20.txt", "titres-produits-neodom-180-430-par-20.txt", "liens-produits-neodom-180-430-par-20.txt"]
+    },
+    {
+      "id": "shopify_category_metafields",
+      "label": "Shopify categories, taxonomy and standard metafields",
+      "paths": ["shopify-category-meta-*.jsonl", "shopify-standard-metafields-audit-*.jsonl", "shopify-metafields-fill-batches"]
+    },
+    {
+      "id": "reviews_trustoo",
+      "label": "Reviews and Trustoo import",
+      "paths": ["trustoo-neodom-*.csv", "neodom_reviews_*.csv", "neodom_trustoo_reviews_import_*.csv"]
+    },
+    {
+      "id": "loyalty_trustwill",
+      "label": "TrustWILL loyalty and referral program",
+      "paths": ["NEODOM_TRUSTWILL_PROGRAMME_FIDELITE.md", "trustwill_*.png", "shopify_referrals_*.png"]
+    },
+    {
+      "id": "blog_seo",
+      "label": "Neodom blog SEO pack and publishing assets",
+      "paths": ["content/neodom-blog-seo", "content/neodom-blog-seo-pack-2026-06-08", "scripts/publish_neodom_blog_articles.py"]
+    },
+    {
+      "id": "messaging_marketing",
+      "label": "Messaging, Omnisend, SMS and abandoned cart work",
+      "paths": ["shopify-messaging-*.png", "screen-omnisend*.png", "screen-panier*.png"]
+    },
+    {
+      "id": "payments_checkout",
+      "label": "Stripe, checkout and payment verification",
+      "paths": ["stripe-*.png", "screen-checkout-*.png"]
+    },
+    {
+      "id": "search_discovery",
+      "label": "Shopify Search & Discovery setup",
+      "paths": ["neodom-search-discovery*.png"]
+    },
+    {
+      "id": "theme_pages_navigation",
+      "label": "Theme, legal pages, navigation and product-page QA",
+      "paths": ["templates", "sections", "content/pages", "shopify-generated/theme-bulk"]
+    }
+  ],
+  "filenameRules": {
+    "lowercase": true,
+    "asciiOnly": true,
+    "separator": "-",
+    "forbiddenTerms": ["img", "image", "product", "source", "final", "aliexpress", "tuya", "wholesale", "supplier"],
+    "recommendedExtensions": ["webp", "jpg", "jpeg", "png"]
+  }
+}
