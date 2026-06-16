@@ -124,7 +124,7 @@ export function validateScoringConfig(config: ProjectScoringConfig): ScoringVali
       errors.push(`product_images block must be 700 points; current value is ${imageBlock.points}.`);
     }
     if (!nearlyEqual(imageSubtaskWeight, imageBlock.weightPercent)) {
-      errors.push(`Image subtask weights must total ${imageBlock.weightPercent}%; current total is ${imageTaskWeight}%.`);
+      errors.push(`Image subtask weights must total ${imageBlock.weightPercent}%; current total is ${imageSubtaskWeight}%.`);
     }
     if (!nearlyEqual(imageSubtaskPoints, imageBlock.points)) {
       errors.push(`Image subtask points must total ${imageBlock.points}; current total is ${imageSubtaskPoints}.`);
